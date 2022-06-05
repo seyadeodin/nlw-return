@@ -1,0 +1,39 @@
+
+npm prisma init
+
+npx prisma migrate dev //
+
+npx prisma studio
+
+migrations: version control inside database
+1. make it easier to undo changes in the db
+2. remove the need of access the db in production to create new tables and fields
+
+nodemailer + mailtrap
+
+
+SOLID
+
+1. SRP: Each class/function has a single responsability. -> how to know if we're breaking this principle? when describing its use we use an "and"
+
+2. OCP: Our classes must be open to extension, but closed to modifications.
+
+3. LSP: We must be able to swap a parent class for its inheritor and everything must work. -> Ave Gavião everything must keep working even if we swap Ave by Gavião
+
+4. ISP: Separate our interfaces as much as possible instead of grouping them into one giant class.
+
+5. DIP: Invert our class dependencies. Instead of class go looking for the dependencies it needs it is informed by its external contexts. (helps A TON with unit testing)
+
+npm i jest
+
+npx jest --init
+
+npm i -D jest @swc/core @swc/jest
+
+module.exports = {
+  transform: {
+    "^.+\\.(t|j)sx?$": ["@swc/jest"],
+  },
+};
+
+tests: create confidence and safety during development specialyl when adding and deploying new functinalities
